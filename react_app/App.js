@@ -8,6 +8,7 @@ import './css/custom.css'
 
 
 import Dashboard from './containers/dashboard'
+import Demo from './containers/cal'
 class App extends Component{
   constructor(props){
     super(props)
@@ -24,7 +25,10 @@ class App extends Component{
     let route=""
       return( 
         <Router>
-        <Route exact path="/" component={Dashboard} />
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/cal" component={Demo} />
+          </Switch>
         </Router>
       );
    }
